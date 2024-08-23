@@ -1,11 +1,17 @@
-```
-apt install hyperfine
-```
+## Install Docker, engine for Open Runtimes
 
 ```
 curl -fsSL https://get.docker.com -o install-docker.sh
 sudo sh install-docker.sh
 ```
+
+## Install hyperfine, CLI benchmark tool
+
+```
+apt install hyperfine
+```
+
+## Install k6, HTTP benchmark tool
 
 ```
 sudo gpg -k

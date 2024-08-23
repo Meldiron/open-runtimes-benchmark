@@ -1,13 +1,11 @@
-`sh bench-build.sh`:
+## `sh bench-build.sh`:
 
 ```
 Time (mean ± σ):      9.900 s ±  0.214 s    [User: 0.014 s, System: 0.015 s]
 Range (min … max):    9.446 s … 10.469 s    25 runs
 ```
 
----
-
-`sh bench-coldstart.sh`:
+##  `sh bench-coldstart.sh`:
 
 ```
 Time (mean ± σ):     222.5 ms ±   9.9 ms    [User: 15.4 ms, System: 19.3 ms]
@@ -19,9 +17,7 @@ CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT     MEM %     NET 
 056a81ade49c   recursing_lamarr   0.00%     1.629MiB / 15.62GiB   0.01%     964B / 138B   0B / 5.36MB   6
 ```
 
----
-
-`sh bench-warmstart.sh`:
+## `sh bench-warmstart.sh`:
 
 
 ```
