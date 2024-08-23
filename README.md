@@ -8,7 +8,7 @@
 
 ## Preparation
 
-Server was prepared with commands mentioned in `PREPARE.sh` file.
+Server was prepared with commands mentioned in `PREPARE.md` file.
 
 ## Benchmark
 
