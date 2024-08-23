@@ -12,6 +12,8 @@ Time (mean ± σ):     222.5 ms ±   9.9 ms    [User: 15.4 ms, System: 19.3 ms]
 Range (min … max):   201.4 ms … 253.2 ms    100 runs
 ```
 
+`docker stats` afterwards:
+
 ```
 CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT     MEM %     NET I/O       BLOCK I/O     PIDS
 056a81ade49c   recursing_lamarr   0.00%     1.629MiB / 15.62GiB   0.01%     964B / 138B   0B / 5.36MB   6
@@ -42,6 +44,8 @@ CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT     MEM %     NET 
 
 running (1m00.0s), 000/100 VUs, 386011 complete and 0 interrupted iterations
 ```
+
+`docker stats` in 55th second:
 
 ```
 CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O    PIDS
