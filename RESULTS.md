@@ -32,6 +32,16 @@ Benchmark 1: sh helper-build.sh
 -rw-r--r-- 1 root root 495 Aug 25 12:50 code.tar.gz
 ```
 
+Deno:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):     866.4 ms ±  71.1 ms    [User: 15.1 ms, System: 16.7 ms]
+  Range (min … max):   787.4 ms … 1127.9 ms    25 runs
+
+-rw-r--r-- 1 root root 538K Aug 25 13:05 code.tar.gz
+```
+
 PHP:
 
 ```
@@ -96,6 +106,17 @@ Benchmark 1: sh helper-coldstart.sh
 
 CONTAINER ID   NAME                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
 e9437c3c9e91   objective_lovelace   0.02%     18.14MiB / 15.62GiB   0.11%     1.62kB / 534B   0B / 12.3kB   5
+```
+
+Deno:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):     392.5 ms ±  17.5 ms    [User: 25.7 ms, System: 35.7 ms]
+  Range (min … max):   361.2 ms … 455.7 ms    100 runs
+
+CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+8c8443f2a614   zealous_nightingale   0.00%     18.27MiB / 15.62GiB   0.11%     8.24kB / 1.96kB   0B / 2.72MB   11
 ```
 
 PHP:
@@ -205,6 +226,31 @@ Bun:
 
 CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
 ad11d0959f8e   fervent_cray   100.40%   1.271GiB / 15.62GiB   8.14%     31.8MB / 51.4MB   0B / 85.7MB   13
+```
+
+Deno:
+
+```
+     checks.........................: 100.00% ✓ 130254      ✗ 0     
+     data_received..................: 25 MB   412 kB/s
+     data_sent......................: 10 MB   174 kB/s
+     http_req_blocked...............: avg=3.89µs  min=746ns   med=2.14µs  max=7.35ms   p(90)=3.53µs  p(95)=4.12µs 
+     http_req_connecting............: avg=613ns   min=0s      med=0s      max=3.63ms   p(90)=0s      p(95)=0s     
+     http_req_duration..............: avg=45.94ms min=8.32ms  med=43.21ms max=266.62ms p(90)=60.54ms p(95)=67.25ms
+       { expected_response:true }...: avg=45.94ms min=8.32ms  med=43.21ms max=266.62ms p(90)=60.54ms p(95)=67.25ms
+     http_req_failed................: 0.00%   ✓ 0           ✗ 130254
+     http_req_receiving.............: avg=51.63µs min=11.58µs med=28.88µs max=13.61ms  p(90)=64.23µs p(95)=90.36µs
+     http_req_sending...............: avg=16.86µs min=4.01µs  med=9.87µs  max=7.88ms   p(90)=16.14µs p(95)=21.91µs
+     http_req_tls_handshaking.......: avg=0s      min=0s      med=0s      max=0s       p(90)=0s      p(95)=0s     
+     http_req_waiting...............: avg=45.87ms min=8.22ms  med=43.14ms max=266.57ms p(90)=60.46ms p(95)=67.17ms
+     http_reqs......................: 130254  2169.695431/s
+     iteration_duration.............: avg=46.05ms min=8.39ms  med=43.33ms max=266.76ms p(90)=60.67ms p(95)=67.39ms
+     iterations.....................: 130254  2169.695431/s
+     vus............................: 100     min=100       max=100 
+     vus_max........................: 100     min=100       max=100 
+
+CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+1648493a0e0d   vibrant_elbakyan   222.71%   976.1MiB / 15.62GiB   6.10%     18.8MB / 39.3MB   0B / 24.9MB   43
 ```
 
 PHP:
@@ -321,6 +367,16 @@ Benchmark 1: sh helper-build.sh
 -rw-r--r-- 1 root root 568 Aug 25 12:44 code.tar.gz
 ```
 
+Deno:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):     873.6 ms ±  61.3 ms    [User: 14.9 ms, System: 17.2 ms]
+  Range (min … max):   795.0 ms … 1041.7 ms    25 runs
+
+-rw-r--r-- 1 root root 538K Aug 25 13:05 code.tar.gz
+```
+
 PHP:
 
 ```
@@ -384,6 +440,17 @@ Benchmark 1: sh helper-coldstart.sh
 
 CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
 49d61d7c79a2   focused_kare   0.02%     18.21MiB / 15.62GiB   0.11%     1.66kB / 576B   0B / 12.3kB   5
+```
+
+Deno:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):     445.9 ms ±  54.7 ms    [User: 30.0 ms, System: 43.7 ms]
+  Range (min … max):   388.2 ms … 758.5 ms    100 runs
+
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O    PIDS
+d8384a482185   sweet_satoshi   0.02%     18.21MiB / 15.62GiB   0.11%     8.1kB / 1.96kB   0B / 160kB   11
 ```
 
 PHP:
@@ -498,6 +565,31 @@ CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O 
 b1d7d4a6fbe7   loving_payne   100.46%   30.14MiB / 15.62GiB   0.19%     131kB / 208kB   0B / 12.3kB   14
 ```
 
+Deno:
+
+```
+     checks.........................: 100.00% ✓ 381      ✗ 0    
+     data_received..................: 71 kB   1.0 kB/s
+     data_sent......................: 31 kB   435 B/s
+     http_req_blocked...............: avg=400.4µs  min=827ns    med=2.73µs  max=5.01ms p(90)=1.31ms   p(95)=3.29ms  
+     http_req_connecting............: avg=288.41µs min=0s       med=0s      max=4.34ms p(90)=846.62µs p(95)=1.64ms  
+     http_req_duration..............: avg=16.94s   min=382.46ms med=17.97s  max=29.69s p(90)=19.05s   p(95)=23.93s  
+       { expected_response:true }...: avg=16.94s   min=382.46ms med=17.97s  max=29.69s p(90)=19.05s   p(95)=23.93s  
+     http_req_failed................: 0.00%   ✓ 0        ✗ 381  
+     http_req_receiving.............: avg=44.75µs  min=12.42µs  med=28.42µs max=1.82ms p(90)=70.67µs  p(95)=96.84µs 
+     http_req_sending...............: avg=149.09µs min=4.85µs   med=12.25µs max=3.42ms p(90)=222.62µs p(95)=389.01µs
+     http_req_tls_handshaking.......: avg=0s       min=0s       med=0s      max=0s     p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=16.94s   min=382.29ms med=17.97s  max=29.69s p(90)=19.05s   p(95)=23.93s  
+     http_reqs......................: 381     5.432425/s
+     iteration_duration.............: avg=16.94s   min=384.6ms  med=17.97s  max=29.69s p(90)=19.05s   p(95)=23.93s  
+     iterations.....................: 381     5.432425/s
+     vus............................: 3       min=3      max=100
+     vus_max........................: 100     min=100    max=100
+
+CONTAINER ID   NAME             CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
+0b3a315a51e4   exciting_tesla   100.19%   33.21MiB / 15.62GiB   0.21%     102kB / 133kB   0B / 2.73MB   27
+```
+
 PHP:
 
 ```
@@ -610,6 +702,16 @@ Benchmark 1: sh helper-build.sh
 -rw-r--r-- 1 root root 4.3M Aug 25 12:42 code.tar.gz
 ```
 
+Deno:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):      7.425 s ±  1.005 s    [User: 0.024 s, System: 0.033 s]
+  Range (min … max):    5.968 s …  9.847 s    25 runs
+
+-rw-r--r-- 1 root root 3.3M Aug 25 13:27 code.tar.gz
+```
+
 PHP:
 
 ```
@@ -674,6 +776,17 @@ Benchmark 1: sh helper-coldstart.sh
 
 CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O   PIDS
 99cbfc624627   funny_goodall   0.01%     124.4MiB / 15.62GiB   0.78%     2.88kB / 1.45kB   0B / 41MB   11
+```
+
+Deno:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):      1.574 s ±  0.168 s    [User: 0.073 s, System: 0.117 s]
+  Range (min … max):    1.257 s …  2.091 s    100 runs
+
+CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O     PIDS
+1d087298b0ea   hopeful_haslett   0.01%     70.41MiB / 15.62GiB   0.44%     9.34kB / 2.9kB   0B / 30.1MB   11
 ```
 
 PHP:
@@ -785,6 +898,31 @@ Bun:
 
 CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O   PIDS
 dbca9769f043   upbeat_franklin   123.13%   923.6MiB / 15.62GiB   5.78%     7.38MB / 15.6MB   0B / 41MB   21
+```
+
+Deno:
+
+```
+     checks.........................: 100.00% ✓ 5649      ✗ 0    
+     data_received..................: 1.1 MB  19 kB/s
+     data_sent......................: 452 kB  7.5 kB/s
+     http_req_blocked...............: avg=42.09µs min=807ns    med=2.65µs  max=6.32ms p(90)=4.38µs  p(95)=5.47µs  
+     http_req_connecting............: avg=34.43µs min=0s       med=0s      max=5.91ms p(90)=0s      p(95)=0s      
+     http_req_duration..............: avg=1.06s   min=490.56ms med=1.03s   max=2.74s  p(90)=1.22s   p(95)=1.31s   
+       { expected_response:true }...: avg=1.06s   min=490.56ms med=1.03s   max=2.74s  p(90)=1.22s   p(95)=1.31s   
+     http_req_failed................: 0.00%   ✓ 0         ✗ 5649 
+     http_req_receiving.............: avg=62.14µs min=13.91µs  med=36.5µs  max=6.16ms p(90)=84.52µs p(95)=109.81µs
+     http_req_sending...............: avg=29.44µs min=4.68µs   med=11.93µs max=4.75ms p(90)=21.43µs p(95)=32.5µs  
+     http_req_tls_handshaking.......: avg=0s      min=0s       med=0s      max=0s     p(90)=0s      p(95)=0s      
+     http_req_waiting...............: avg=1.06s   min=490.51ms med=1.03s   max=2.73s  p(90)=1.22s   p(95)=1.31s   
+     http_reqs......................: 5649    93.635119/s
+     iteration_duration.............: avg=1.06s   min=490.66ms med=1.03s   max=2.74s  p(90)=1.22s   p(95)=1.31s   
+     iterations.....................: 5649    93.635119/s
+     vus............................: 100     min=100     max=100
+     vus_max........................: 100     min=100     max=100
+
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT   MEM %     NET I/O          BLOCK I/O     PIDS
+ee65d2097641   elastic_tesla   114.76%   214MiB / 15.62GiB   1.34%     854kB / 1.86MB   0B / 30.1MB   43
 ```
 
 PHP:
