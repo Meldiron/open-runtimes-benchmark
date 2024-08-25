@@ -14,7 +14,9 @@ Server was prepared with commands mentioned in `PREPARE.md` file.
 
 Some runtimes are single-threaded. With libraries it can be made multi-threaded. To do compasasion of performance potention in each runtime, I recommend to devide iterations by cpu usage, and use that to compare between runtimes. Same recommendation when comparing memory consumption.
 
-Benchmarks were made to test Go feature and it's performance agaisnt other runtimes that Open Runtimes supports.
+Python runtime was facing some concurrency issues during benchmark. For that reason, only 1 concurrent request was sent during benchmark, resulting in bad overall results for Python. When in ratio with CPU usage, results for Python are more representative.
+
+Benchmarks ideas were designed to test Go feature and it's performance agaisnt other runtimes that Open Runtimes supports.
 
 ## Benchmark
 
