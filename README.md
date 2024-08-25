@@ -33,3 +33,9 @@ Fibonacci benchmarks allows us to understand concurrency model of each runtime w
 ### Scraper
 
 Scraper benchmark includes multiple libraries, and focuses on speed on build and cold-start of a bigger function. Some interpreted languages might under-perform, and it could be solved by introducing a library with a build step, to minify the code into single file. This benchmark focuses on native approch, so thise improvements were not done.
+
+## Future plans
+
+Open Runtimes has following runtimes that has not been benchmarked yet: C++, Dotnet, Java, Kotlin, Ruby, Swift
+
+Those benchmarks can be automated to always represent latest Open Rnutimes releases.
