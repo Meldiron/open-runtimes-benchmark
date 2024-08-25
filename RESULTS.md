@@ -42,6 +42,16 @@ Benchmark 1: sh helper-build.sh
 -rw-r--r-- 1 root root 5.4M Aug 25 10:26 code.tar.gz
 ```
 
+Dart:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):      9.777 s ±  1.052 s    [User: 0.017 s, System: 0.019 s]
+  Range (min … max):    8.525 s … 12.158 s    25 runs
+
+-rw-r--r-- 1 root root 2.5M Aug 25 10:52 code.tar.gz
+```
+
 ###  `sh bench-coldstart.sh` && `docker stats`:
 
 Go:
@@ -86,6 +96,17 @@ Benchmark 1: sh helper-coldstart.sh
   Range (min … max):    1.585 s …  2.343 s    100 runs
 
 -rw-r--r-- 1 root root 5.4M Aug 25 09:14 code.tar.gz
+```
+
+Dart:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):     328.0 ms ±  30.7 ms    [User: 22.7 ms, System: 29.5 ms]
+  Range (min … max):   283.1 ms … 406.1 ms    100 runs
+
+CONTAINER ID   NAME                   CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
+71c72e787b06   condescending_merkle   0.00%     3.652MiB / 15.62GiB   0.02%     1.58kB / 776B   0B / 6.67MB   6
 ```
 
 ### `sh bench-warmstart.sh` && `docker stats`:
@@ -193,6 +214,31 @@ CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I
 518f1c0700fd   peaceful_hopper   94.42%    130.5MiB / 15.62GiB   0.82%     3.06MB / 5.27MB   0B / 22.7MB   7
 ```
 
+Dart:
+
+```
+     checks.........................: 100.00% ✓ 205673      ✗ 0     
+     data_received..................: 62 MB   1.0 MB/s
+     data_sent......................: 17 MB   274 kB/s
+     http_req_blocked...............: avg=3.66µs  min=807ns   med=2.58µs  max=2.44ms   p(90)=3.75µs  p(95)=4.5µs   
+     http_req_connecting............: avg=155ns   min=0s      med=0s      max=1.96ms   p(90)=0s      p(95)=0s      
+     http_req_duration..............: avg=29.03ms min=1.62ms  med=28.41ms max=174.07ms p(90)=35.84ms p(95)=38.6ms  
+       { expected_response:true }...: avg=29.03ms min=1.62ms  med=28.41ms max=174.07ms p(90)=35.84ms p(95)=38.6ms  
+     http_req_failed................: 0.00%   ✓ 0           ✗ 205673
+     http_req_receiving.............: avg=60.73µs min=14.39µs med=49.3µs  max=8.2ms    p(90)=83.96µs p(95)=116.47µs
+     http_req_sending...............: avg=16.53µs min=4.71µs  med=12.1µs  max=5.03ms   p(90)=21.13µs p(95)=27.34µs 
+     http_req_tls_handshaking.......: avg=0s      min=0s      med=0s      max=0s       p(90)=0s      p(95)=0s      
+     http_req_waiting...............: avg=28.95ms min=1.53ms  med=28.34ms max=173.99ms p(90)=35.75ms p(95)=38.51ms 
+     http_reqs......................: 205673  3427.041909/s
+     iteration_duration.............: avg=29.15ms min=1.84ms  med=28.53ms max=175.01ms p(90)=35.98ms p(95)=38.75ms 
+     iterations.....................: 205673  3427.041909/s
+     vus............................: 100     min=100       max=100 
+     vus_max........................: 100     min=100       max=100 
+
+CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT    MEM %     NET I/O         BLOCK I/O     PIDS
+f7d012a7a0de   reverent_jemison   202.42%   1014MiB / 15.62GiB   6.34%     43MB / 88.4MB   0B / 79.7MB   40
+```
+
 ---
 
 
@@ -240,6 +286,16 @@ Benchmark 1: sh helper-build.sh
 -rw-r--r-- 1 root root 5.4M Aug 25 09:40 code.tar.gz
 ```
 
+Dart:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):     10.243 s ±  0.513 s    [User: 0.015 s, System: 0.018 s]
+  Range (min … max):    9.557 s … 11.569 s    25 runs
+
+-rw-r--r-- 1 root root 2.5M Aug 25 11:11 code.tar.gz
+```
+
 ###  `sh bench-coldstart.sh` && `docker stats`:
 
 Go:
@@ -284,6 +340,17 @@ Benchmark 1: sh helper-coldstart.sh
 
 CONTAINER ID   NAME             CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
 546034cc984a   ecstatic_gates   0.01%     29.52MiB / 15.62GiB   0.18%     3.17kB / 1.74kB   0B / 22.7MB   7
+```
+
+Dart:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):     338.1 ms ±  33.1 ms    [User: 22.9 ms, System: 31.4 ms]
+  Range (min … max):   291.4 ms … 444.5 ms    100 runs
+
+CONTAINER ID   NAME                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
+b4e26cfe492c   recursing_poincare   0.00%     3.648MiB / 15.62GiB   0.02%     1.66kB / 830B   0B / 6.67MB   6
 ```
 
 ### `sh bench-warmstart.sh` && `docker stats`:
@@ -390,6 +457,31 @@ CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O
 add7be77fde2   sweet_mclaren   102.19%   30.42MiB / 15.62GiB   0.19%     59.9kB / 47.4kB   0B / 22.7MB   11
 ```
 
+Dart:
+
+```
+     checks.........................: 100.00% ✓ 764       ✗ 0    
+     data_received..................: 228 kB  3.6 kB/s
+     data_sent......................: 61 kB   974 B/s
+     http_req_blocked...............: avg=55.8µs  min=1.04µs   med=3.85µs  max=1.97ms   p(90)=170.47µs p(95)=347.36µs
+     http_req_connecting............: avg=34.05µs min=0s       med=0s      max=1.37ms   p(90)=108.8µs  p(95)=248.6µs 
+     http_req_duration..............: avg=8.14s   min=553.93ms med=7.75s   max=44.31s   p(90)=8.23s    p(95)=19.94s  
+       { expected_response:true }...: avg=8.14s   min=553.93ms med=7.75s   max=44.31s   p(90)=8.23s    p(95)=19.94s  
+     http_req_failed................: 0.00%   ✓ 0         ✗ 764  
+     http_req_receiving.............: avg=83.99µs min=18µs     med=71.92µs max=676.92µs p(90)=128.39µs p(95)=173.46µs
+     http_req_sending...............: avg=48.56µs min=5.94µs   med=18.22µs max=1.7ms    p(90)=117.82µs p(95)=190.47µs
+     http_req_tls_handshaking.......: avg=0s      min=0s       med=0s      max=0s       p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=8.14s   min=553.66ms med=7.75s   max=44.31s   p(90)=8.23s    p(95)=19.94s  
+     http_reqs......................: 764     12.176005/s
+     iteration_duration.............: avg=8.14s   min=554.67ms med=7.75s   max=44.31s   p(90)=8.23s    p(95)=19.94s  
+     iterations.....................: 764     12.176005/s
+     vus............................: 73      min=73      max=100
+     vus_max........................: 100     min=100     max=100
+
+CONTAINER ID   NAME          CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
+19bee9cf82bc   busy_darwin   100.90%   30.02MiB / 15.62GiB   0.19%     183kB / 357kB   0B / 6.67MB   19
+```
+
 ---
 
 
@@ -437,6 +529,16 @@ Benchmark 1: sh helper-build.sh
 -rw-r--r-- 1 root root 11M Aug 25 10:20 code.tar.gz
 ```
 
+Dart:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):     15.239 s ±  0.919 s    [User: 0.016 s, System: 0.019 s]
+  Range (min … max):   13.712 s … 17.211 s    25 runs
+
+-rw-r--r-- 1 root root 3.0M Aug 25 12:08 code.tar.gz
+```
+
 ###  `sh bench-coldstart.sh` && `docker stats`:
 
 Go:
@@ -482,6 +584,17 @@ Benchmark 1: sh helper-coldstart.sh
 
 CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
 0ecdf1d40660   practical_curran   0.01%     47.51MiB / 15.62GiB   0.30%     3.84kB / 2.17kB   0B / 45.6MB   7
+```
+
+Dart:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):     397.6 ms ±  87.3 ms    [User: 26.9 ms, System: 36.8 ms]
+  Range (min … max):   312.2 ms … 1126.7 ms    100 runs
+
+CONTAINER ID   NAME                CPU %     MEM USAGE / LIMIT     MEM %     NET I/O        BLOCK I/O     PIDS
+c7c893092c6c   competent_johnson   0.00%     4.605MiB / 15.62GiB   0.03%     1.8kB / 830B   0B / 8.04MB   7
 ```
 
 ### `sh bench-warmstart.sh` && `docker stats`:
@@ -588,4 +701,29 @@ Python:
 NAMES
 CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT    MEM %     NET I/O         BLOCK I/O     PIDS
 12e472713195   frosty_ramanujan   100.53%   68.9MiB / 15.62GiB   0.43%     216kB / 442kB   0B / 45.6MB   8
+```
+
+Dart:
+
+```
+     checks.........................: 100.00% ✓ 66504       ✗ 0    
+     data_received..................: 21 MB   346 kB/s
+     data_sent......................: 5.3 MB  89 kB/s
+     http_req_blocked...............: avg=6.96µs  min=777ns   med=2.95µs  max=4.19ms   p(90)=4.67µs   p(95)=5.53µs  
+     http_req_connecting............: avg=2.9µs   min=0s      med=0s      max=4.03ms   p(90)=0s       p(95)=0s      
+     http_req_duration..............: avg=90.1ms  min=44.44ms med=88.43ms max=285.23ms p(90)=107.58ms p(95)=112.44ms
+       { expected_response:true }...: avg=90.1ms  min=44.44ms med=88.43ms max=285.23ms p(90)=107.58ms p(95)=112.44ms
+     http_req_failed................: 0.00%   ✓ 0           ✗ 66504
+     http_req_receiving.............: avg=71.1µs  min=15.95µs med=58.54µs max=6.65ms   p(90)=101.32µs p(95)=127.84µs
+     http_req_sending...............: avg=19.14µs min=4.82µs  med=14.06µs max=4.91ms   p(90)=25.8µs   p(95)=33.26µs 
+     http_req_tls_handshaking.......: avg=0s      min=0s      med=0s      max=0s       p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=90.01ms min=44.35ms med=88.34ms max=284.68ms p(90)=107.48ms p(95)=112.34ms
+     http_reqs......................: 66504   1107.512772/s
+     iteration_duration.............: avg=90.25ms min=44.59ms med=88.58ms max=285.68ms p(90)=107.75ms p(95)=112.61ms
+     iterations.....................: 66504   1107.512772/s
+     vus............................: 100     min=100       max=100
+     vus_max........................: 100     min=100       max=100
+
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+929b70c64360   gifted_wilbur   168.34%   684.6MiB / 15.62GiB   4.28%     14.1MB / 33.8MB   0B / 20.6MB   39
 ```
