@@ -22,6 +22,16 @@ Benchmark 1: sh helper-build.sh
 -rw-r--r-- 1 root root 552 Aug 23 10:50 code.tar.gz
 ```
 
+Bun:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):     334.9 ms ±  12.2 ms    [User: 13.6 ms, System: 16.2 ms]
+  Range (min … max):   312.6 ms … 372.6 ms    25 runs
+
+-rw-r--r-- 1 root root 495 Aug 25 12:50 code.tar.gz
+```
+
 PHP:
 
 ```
@@ -75,6 +85,17 @@ Benchmark 1: sh helper-coldstart.sh
  
 CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT    MEM %     NET I/O         BLOCK I/O     PIDS
 60c1aeff29bc   zealous_lumiere   0.00%     9.43MiB / 15.62GiB   0.06%     1.55kB / 635B   0B / 20.5kB   13
+```
+
+Bun:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):     363.3 ms ±  33.5 ms    [User: 24.4 ms, System: 33.8 ms]
+  Range (min … max):   317.0 ms … 554.3 ms    100 runs
+
+CONTAINER ID   NAME                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
+e9437c3c9e91   objective_lovelace   0.02%     18.14MiB / 15.62GiB   0.11%     1.62kB / 534B   0B / 12.3kB   5
 ```
 
 PHP:
@@ -136,7 +157,6 @@ CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT     MEM %     NET 
 5b49bea61bd2   trusting_volhard   338.15%   1.815GiB / 15.62GiB   11.62%    55.9MB / 93.3MB   0B / 394MB   112
 ```
 
-
 Node:
 
 ```
@@ -160,6 +180,31 @@ Node:
 
 CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
 4f1f54a12dfb   pedantic_vaughan   103.77%   636.7MiB / 15.62GiB   3.98%     15.3MB / 36.1MB   0B / 32.8kB   13
+```
+
+Bun:
+
+```
+     checks.........................: 100.00% ✓ 218197     ✗ 0     
+     data_received..................: 36 MB   607 kB/s
+     data_sent......................: 18 MB   291 kB/s
+     http_req_blocked...............: avg=3.22µs  min=842ns   med=2.47µs  max=6.26ms   p(90)=3.54µs  p(95)=4.2µs  
+     http_req_connecting............: avg=172ns   min=0s      med=0s      max=4.27ms   p(90)=0s      p(95)=0s     
+     http_req_duration..............: avg=27.38ms min=6.82ms  med=26.59ms max=126.49ms p(90)=32.4ms  p(95)=36.38ms
+       { expected_response:true }...: avg=27.38ms min=6.82ms  med=26.59ms max=126.49ms p(90)=32.4ms  p(95)=36.38ms
+     http_req_failed................: 0.00%   ✓ 0          ✗ 218197
+     http_req_receiving.............: avg=46.11µs min=13.95µs med=42.38µs max=8.74ms   p(90)=58.92µs p(95)=66.4µs 
+     http_req_sending...............: avg=15.42µs min=4.66µs  med=12.09µs max=12.64ms  p(90)=20.79µs p(95)=23.95µs
+     http_req_tls_handshaking.......: avg=0s      min=0s      med=0s      max=0s       p(90)=0s      p(95)=0s     
+     http_req_waiting...............: avg=27.31ms min=6.76ms  med=26.53ms max=126.4ms  p(90)=32.33ms p(95)=36.3ms 
+     http_reqs......................: 218197  3635.04605/s
+     iteration_duration.............: avg=27.48ms min=6.92ms  med=26.7ms  max=128.97ms p(90)=32.52ms p(95)=36.5ms 
+     iterations.....................: 218197  3635.04605/s
+     vus............................: 100     min=100      max=100 
+     vus_max........................: 100     min=100      max=100 
+
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+ad11d0959f8e   fervent_cray   100.40%   1.271GiB / 15.62GiB   8.14%     31.8MB / 51.4MB   0B / 85.7MB   13
 ```
 
 PHP:
@@ -266,6 +311,16 @@ Benchmark 1: sh helper-build.sh
 -rw-r--r-- 1 root root 626 Aug 23 10:53 code.tar.gz
 ```
 
+Bun:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):     409.5 ms ±  32.9 ms    [User: 17.0 ms, System: 22.3 ms]
+  Range (min … max):   357.7 ms … 478.7 ms    25 runs
+
+-rw-r--r-- 1 root root 568 Aug 25 12:44 code.tar.gz
+```
+
 PHP:
 
 ```
@@ -318,6 +373,17 @@ Benchmark 1: sh helper-coldstart.sh
 
 CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
 f2dc20ffca4d   quirky_panini   0.00%     9.492MiB / 15.62GiB   0.06%     1.94kB / 677B   0B / 16.4kB   13
+```
+
+Bun:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):     329.8 ms ±  23.6 ms    [User: 22.5 ms, System: 29.4 ms]
+  Range (min … max):   296.9 ms … 503.9 ms    100 runs
+
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
+49d61d7c79a2   focused_kare   0.02%     18.21MiB / 15.62GiB   0.11%     1.66kB / 576B   0B / 12.3kB   5
 ```
 
 PHP:
@@ -405,6 +471,31 @@ Node:
 
 CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
 058c85f9e4cf   ecstatic_edison   100.48%   16.64MiB / 15.62GiB   0.10%     102kB / 149kB   0B / 16.4kB   13
+```
+
+Bun:
+
+```
+     checks.........................: 100.00% ✓ 732       ✗ 0    
+     data_received..................: 120 kB  1.7 kB/s
+     data_sent......................: 59 kB   834 B/s
+     http_req_blocked...............: avg=138.63µs min=2.38µs   med=4.28µs  max=4.52ms p(90)=158.21µs p(95)=808.43µs
+     http_req_connecting............: avg=84.12µs  min=0s       med=0s      max=2.65ms p(90)=100.94µs p(95)=395.04µs
+     http_req_duration..............: avg=8.86s    min=274.01ms med=9.39s   max=19.5s  p(90)=9.82s    p(95)=10.15s  
+       { expected_response:true }...: avg=8.86s    min=274.01ms med=9.39s   max=19.5s  p(90)=9.82s    p(95)=10.15s  
+     http_req_failed................: 0.00%   ✓ 0         ✗ 732  
+     http_req_receiving.............: avg=99.46µs  min=58.44µs  med=91.91µs max=1.05ms p(90)=123.29µs p(95)=134.21µs
+     http_req_sending...............: avg=64.65µs  min=12.6µs   med=22.09µs max=1.82ms p(90)=64.86µs  p(95)=205.55µs
+     http_req_tls_handshaking.......: avg=0s       min=0s       med=0s      max=0s     p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=8.86s    min=273.27ms med=9.39s   max=19.5s  p(90)=9.82s    p(95)=10.15s  
+     http_reqs......................: 732     10.419732/s
+     iteration_duration.............: avg=8.86s    min=276.21ms med=9.39s   max=19.5s  p(90)=9.82s    p(95)=10.15s  
+     iterations.....................: 732     10.419732/s
+     vus............................: 3       min=3       max=100
+     vus_max........................: 100     min=100     max=100
+
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
+b1d7d4a6fbe7   loving_payne   100.46%   30.14MiB / 15.62GiB   0.19%     131kB / 208kB   0B / 12.3kB   14
 ```
 
 PHP:
@@ -509,6 +600,16 @@ Benchmark 1: sh helper-build.sh
 -rw-r--r-- 1 root root 625 Aug 23 11:28 code.tar.gz
 ```
 
+Bun:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):      2.646 s ±  0.122 s    [User: 0.015 s, System: 0.017 s]
+  Range (min … max):    2.414 s …  2.870 s    25 runs
+
+-rw-r--r-- 1 root root 4.3M Aug 25 12:42 code.tar.gz
+```
+
 PHP:
 
 ```
@@ -562,6 +663,17 @@ Benchmark 1: sh helper-coldstart.sh
 
 CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O   PIDS
 8983e05afdb1   suspicious_borg   0.00%     59.14MiB / 15.62GiB   0.37%     2.66kB / 1.47kB   0B / 41MB   13
+```
+
+Bun:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):      1.841 s ±  0.170 s    [User: 0.093 s, System: 0.151 s]
+  Range (min … max):    1.483 s …  2.289 s    100 runs
+
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O   PIDS
+99cbfc624627   funny_goodall   0.01%     124.4MiB / 15.62GiB   0.78%     2.88kB / 1.45kB   0B / 41MB   11
 ```
 
 PHP:
@@ -648,6 +760,31 @@ Node:
 
 CONTAINER ID   NAME             CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O   PIDS
 4021df46d569   angry_dubinsky   129.71%   624.4MiB / 15.62GiB   3.90%     4.54MB / 11MB   0B / 41MB   13
+```
+
+Bun:
+
+```
+     checks.........................: 100.00% ✓ 50345      ✗ 0    
+     data_received..................: 8.9 MB  149 kB/s
+     data_sent......................: 4.0 MB  67 kB/s
+     http_req_blocked...............: avg=5.11µs   min=926ns   med=2.27µs   max=5.23ms   p(90)=3.46µs   p(95)=4.24µs  
+     http_req_connecting............: avg=2.04µs   min=0s      med=0s       max=4.7ms    p(90)=0s       p(95)=0s      
+     http_req_duration..............: avg=119.13ms min=86.75ms med=112.89ms max=919.77ms p(90)=142.23ms p(95)=159.94ms
+       { expected_response:true }...: avg=119.13ms min=86.75ms med=112.89ms max=919.77ms p(90)=142.23ms p(95)=159.94ms
+     http_req_failed................: 0.00%   ✓ 0          ✗ 50345
+     http_req_receiving.............: avg=44.79µs  min=13.73µs med=39.88µs  max=9.47ms   p(90)=58.46µs  p(95)=69.61µs 
+     http_req_sending...............: avg=14.57µs  min=4.82µs  med=11.44µs  max=5.35ms   p(90)=20.15µs  p(95)=23.68µs 
+     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s       max=0s       p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=119.07ms min=86.7ms  med=112.83ms max=919.59ms p(90)=142.16ms p(95)=159.86ms
+     http_reqs......................: 50345   837.884945/s
+     iteration_duration.............: avg=119.23ms min=86.84ms med=112.99ms max=920.14ms p(90)=142.37ms p(95)=160.07ms
+     iterations.....................: 50345   837.884945/s
+     vus............................: 100     min=100      max=100
+     vus_max........................: 100     min=100      max=100
+
+CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O   PIDS
+dbca9769f043   upbeat_franklin   123.13%   923.6MiB / 15.62GiB   5.78%     7.38MB / 15.6MB   0B / 41MB   21
 ```
 
 PHP:
