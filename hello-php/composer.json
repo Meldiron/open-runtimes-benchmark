@@ -1,0 +1,10 @@
+{
+    "name": "meldiron/hello-php",
+    "authors": [
+        {
+            "name": "Matej Bačo",
+            "email": "matejbaco2000@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,14 @@
+{
+    "name": "meldiron/hello-php",
+    "authors": [
+        {
+            "name": "Matej Bačo",
+            "email": "matejbaco2000@gmail.com"
+        }
+    ],
+    "require": {
+        "fakerphp/faker": "^1.23",
+        "guzzlehttp/guzzle": "^7.0",
+        "paquettg/php-html-parser": "^2.2"
+    }
+}
