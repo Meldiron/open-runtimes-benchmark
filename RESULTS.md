@@ -82,6 +82,16 @@ Benchmark 1: sh helper-build.sh
 -rw-r--r-- 1 root root 321K Aug 25 13:42 code.tar.gz
 ```
 
+Ruby:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):     15.059 s ±  0.973 s    [User: 0.017 s, System: 0.019 s]
+  Range (min … max):   13.311 s … 16.791 s    25 runs
+
+-rw-r--r-- 1 root root 3.2M Aug 25 14:45 code.tar.gz
+```
+
 ###  `sh bench-coldstart.sh` && `docker stats`:
 
 Go:
@@ -170,6 +180,17 @@ Benchmark 1: sh helper-coldstart.sh
 
 CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O    PIDS
 2fb0d2234bbb   eager_darwin   0.15%     21.38MiB / 15.62GiB   0.13%     1.63kB / 713B   0B / 864kB   28
+```
+
+Ruby:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):      1.790 s ±  0.190 s    [User: 0.121 s, System: 0.191 s]
+  Range (min … max):    1.506 s …  2.401 s    100 runs
+
+CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+630031bb1067   strange_haslett   0.01%     32.98MiB / 15.62GiB   0.21%     3.04kB / 1.72kB   0B / 17.2MB   9
 ```
 
 ### `sh bench-warmstart.sh` && `docker stats`:
@@ -374,7 +395,31 @@ Dotnet:
 
 CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O        PIDS
 67ee05393ef7   busy_wozniak   296.01%   1.55GiB / 15.62GiB   9.92%     46.6MB / 80.2MB   12.3kB / 152MB   34
+```
 
+Ruby:
+
+```
+     checks.........................: 100.00% ✓ 41422      ✗ 0    
+     data_received..................: 6.8 MB  107 kB/s
+     data_sent......................: 3.3 MB  52 kB/s
+     http_req_blocked...............: avg=31.81µs  min=1.16µs  med=3.45µs  max=1.81ms   p(90)=20.65µs  p(95)=260.81µs
+     http_req_connecting............: avg=19.54µs  min=0s      med=0s      max=910.79µs p(90)=0s       p(95)=173.26µs
+     http_req_duration..............: avg=149.4ms  min=1.08ms  med=6.3ms   max=4s       p(90)=12.62ms  p(95)=1.46s   
+       { expected_response:true }...: avg=149.4ms  min=1.08ms  med=6.3ms   max=4s       p(90)=12.62ms  p(95)=1.46s   
+     http_req_failed................: 0.00%   ✓ 0          ✗ 41422
+     http_req_receiving.............: avg=79.99µs  min=21.93µs med=69.47µs max=4.61ms   p(90)=121.62µs p(95)=149.43µs
+     http_req_sending...............: avg=23.75µs  min=6.38µs  med=18.73µs max=2.28ms   p(90)=39.34µs  p(95)=52.2µs  
+     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s      max=0s       p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=149.29ms min=1.02ms  med=6.2ms   max=4s       p(90)=12.5ms   p(95)=1.46s   
+     http_reqs......................: 41422   647.639859/s
+     iteration_duration.............: avg=149.58ms min=1.2ms   med=6.46ms  max=4s       p(90)=12.84ms  p(95)=1.46s   
+     iterations.....................: 41422   647.639859/s
+     vus............................: 25      min=25       max=100
+     vus_max........................: 100     min=100      max=100
+
+CONTAINER ID   NAME                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+d47abf819e6e   determined_feynman   106.93%   231.7MiB / 15.62GiB   1.45%     7.26MB / 10.5MB   0B / 17.2MB   13
 ```
 
 ---
@@ -462,6 +507,16 @@ Benchmark 1: sh helper-build.sh
   Range (min … max):    6.976 s …  9.526 s    25 runs
 
 -rw-r--r-- 1 root root 321K Aug 25 13:53 code.tar.gz
+```
+
+Ruby:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):     14.396 s ±  0.770 s    [User: 0.016 s, System: 0.018 s]
+  Range (min … max):   13.374 s … 15.874 s    25 runs
+
+-rw-r--r-- 1 root root 3.2M Aug 25 14:59 code.tar.gz
 ```
 
 ###  `sh bench-coldstart.sh` && `docker stats`:
@@ -552,6 +607,17 @@ Benchmark 1: sh helper-coldstart.sh
 
 CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT    MEM %     NET I/O        BLOCK I/O    PIDS
 87501c173725   recursing_panini   0.11%     21.2MiB / 15.62GiB   0.13%     1.7kB / 767B   0B / 864kB   28
+```
+
+Ruby:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):      1.762 s ±  0.204 s    [User: 0.115 s, System: 0.191 s]
+  Range (min … max):    1.532 s …  2.804 s    100 runs
+
+CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+32141e375d04   hopeful_nightingale   0.01%     32.98MiB / 15.62GiB   0.21%     2.96kB / 1.66kB   0B / 17.2MB   9
 ```
 
 ### `sh bench-warmstart.sh` && `docker stats`:
@@ -758,6 +824,31 @@ CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O
 28ec22987fab   bold_goldberg   795.35%   127.2MiB / 15.62GiB   0.80%     1.13MB / 2.37MB   0B / 864kB   40
 ```
 
+Ruby:
+
+```
+     checks.........................: 100.00% ✓ 30243      ✗ 0    
+     data_received..................: 4.9 MB  76 kB/s
+     data_sent......................: 2.4 MB  38 kB/s
+     http_req_blocked...............: avg=39.4µs   min=1.37µs  med=4.26µs  max=13.73ms p(90)=92.38µs  p(95)=288.06µs
+     http_req_connecting............: avg=24.93µs  min=0s      med=0s      max=13.61ms p(90)=0s       p(95)=192.76µs
+     http_req_duration..............: avg=204.75ms min=1.92ms  med=8.64ms  max=4.08s   p(90)=29.12ms  p(95)=1.93s   
+       { expected_response:true }...: avg=204.75ms min=1.92ms  med=8.64ms  max=4.08s   p(90)=29.12ms  p(95)=1.93s   
+     http_req_failed................: 0.00%   ✓ 0          ✗ 30243
+     http_req_receiving.............: avg=97.69µs  min=15.86µs med=84.54µs max=15.08ms p(90)=145.47µs p(95)=179.78µs
+     http_req_sending...............: avg=30.5µs   min=6.04µs  med=21.99µs max=8.2ms   p(90)=46.49µs  p(95)=61.18µs 
+     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s      max=0s      p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=204.62ms min=1.84ms  med=8.52ms  max=4.08s   p(90)=28.95ms  p(95)=1.93s   
+     http_reqs......................: 30243   472.210655/s
+     iteration_duration.............: avg=204.98ms min=2.03ms  med=8.83ms  max=4.08s   p(90)=29.33ms  p(95)=1.93s   
+     iterations.....................: 30243   472.210655/s
+     vus............................: 4       min=4        max=100
+     vus_max........................: 100     min=100      max=100
+
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+eb1286e72635   frosty_bartik   107.01%   179.7MiB / 15.62GiB   1.12%     5.39MB / 7.66MB   0B / 17.2MB   13
+```
+
 ---
 
 
@@ -843,6 +934,16 @@ Benchmark 1: sh helper-build.sh
   Range (min … max):    8.071 s …  9.913 s    25 runs
 
 -rw-r--r-- 1 root root 534K Aug 25 14:19 code.tar.gz
+```
+
+Ruby:
+
+```
+Benchmark 1: sh helper-build.sh
+  Time (mean ± σ):     15.427 s ±  0.724 s    [User: 0.018 s, System: 0.018 s]
+  Range (min … max):   14.361 s … 16.946 s    25 runs
+
+-rw-r--r-- 1 root root 8.0M Aug 25 15:45 code.tar.gz
 ```
 
 ###  `sh bench-coldstart.sh` && `docker stats`:
@@ -934,6 +1035,17 @@ Benchmark 1: sh helper-coldstart.sh
 
 CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O        BLOCK I/O    PIDS
 420d73ed6ce2   bold_margulis   0.02%     21.76MiB / 15.62GiB   0.14%     1.7kB / 767B   0B / 1.4MB   28
+```
+
+Ruby:
+
+```
+Benchmark 1: sh helper-coldstart.sh
+  Time (mean ± σ):      2.325 s ±  0.216 s    [User: 0.135 s, System: 0.219 s]
+  Range (min … max):    1.976 s …  3.266 s    100 runs
+
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O   PIDS
+9f12b269f86c   zealous_noyce   0.01%     48.27MiB / 15.62GiB   0.30%     3.26kB / 1.88kB   0B / 49MB   9
 ```
 
 ### `sh bench-warmstart.sh` && `docker stats`:
@@ -1140,4 +1252,31 @@ Dotnet:
 
 CONTAINER ID   NAME                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O    PIDS
 945a25e067c4   nervous_cartwright   479.54%   3.132GiB / 15.62GiB   20.06%    21.3MB / 41.9MB   0B / 118MB   38
+```
+
+Ruby:
+
+❗ Ruby benchmark only uses 1 VU compared to 100 VUs in other benchmarks.
+
+```
+     checks.........................: 100.00% ✓ 5423      ✗ 0   
+     data_received..................: 943 kB  16 kB/s
+     data_sent......................: 434 kB  7.2 kB/s
+     http_req_blocked...............: avg=3.93µs  min=1.82µs  med=3.28µs  max=968.35µs p(90)=4.95µs   p(95)=5.53µs  
+     http_req_connecting............: avg=146ns   min=0s      med=0s      max=793.81µs p(90)=0s       p(95)=0s      
+     http_req_duration..............: avg=10.87ms min=8.08ms  med=10.48ms max=1.83s    p(90)=11.61ms  p(95)=12.03ms 
+       { expected_response:true }...: avg=10.87ms min=8.08ms  med=10.48ms max=1.83s    p(90)=11.61ms  p(95)=12.03ms 
+     http_req_failed................: 0.00%   ✓ 0         ✗ 5423
+     http_req_receiving.............: avg=85.18µs min=41.13µs med=80.94µs max=403.74µs p(90)=108.51µs p(95)=124.76µs
+     http_req_sending...............: avg=20.28µs min=8.68µs  med=18.48µs max=965.47µs p(90)=27.29µs  p(95)=30.69µs 
+     http_req_tls_handshaking.......: avg=0s      min=0s      med=0s      max=0s       p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=10.76ms min=8.01ms  med=10.38ms max=1.83s    p(90)=11.5ms   p(95)=11.91ms 
+     http_reqs......................: 5423    90.373011/s
+     iteration_duration.............: avg=11.04ms min=8.2ms   med=10.65ms max=1.83s    p(90)=11.8ms   p(95)=12.22ms 
+     iterations.....................: 5423    90.373011/s
+     vus............................: 1       min=1       max=1 
+     vus_max........................: 1       min=1       max=1 
+     
+CONTAINER ID   NAME                    CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O   PIDS
+35de58ced1d1   infallible_mcclintock   56.11%    164.9MiB / 15.62GiB   1.03%     776kB / 1.27MB   0B / 49MB   11
 ```
