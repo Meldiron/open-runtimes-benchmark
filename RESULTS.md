@@ -157,7 +157,8 @@ Benchmark 1: sh helper-coldstart.sh
   Time (mean ± σ):      1.849 s ±  0.161 s    [User: 0.126 s, System: 0.198 s]
   Range (min … max):    1.585 s …  2.343 s    100 runs
 
--rw-r--r-- 1 root root 5.4M Aug 25 09:14 code.tar.gz
+CONTAINER ID   NAME                    CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
+de9d2f74657d   condescending_meitner   0.01%     29.36MiB / 15.62GiB   0.18%     1.51kB / 528B   0B / 22.7MB   7
 ```
 
 Dart:
@@ -827,26 +828,26 @@ CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O
 Ruby:
 
 ```
-     checks.........................: 100.00% ✓ 30243      ✗ 0    
-     data_received..................: 4.9 MB  76 kB/s
-     data_sent......................: 2.4 MB  38 kB/s
-     http_req_blocked...............: avg=39.4µs   min=1.37µs  med=4.26µs  max=13.73ms p(90)=92.38µs  p(95)=288.06µs
-     http_req_connecting............: avg=24.93µs  min=0s      med=0s      max=13.61ms p(90)=0s       p(95)=192.76µs
-     http_req_duration..............: avg=204.75ms min=1.92ms  med=8.64ms  max=4.08s   p(90)=29.12ms  p(95)=1.93s   
-       { expected_response:true }...: avg=204.75ms min=1.92ms  med=8.64ms  max=4.08s   p(90)=29.12ms  p(95)=1.93s   
-     http_req_failed................: 0.00%   ✓ 0          ✗ 30243
-     http_req_receiving.............: avg=97.69µs  min=15.86µs med=84.54µs max=15.08ms p(90)=145.47µs p(95)=179.78µs
-     http_req_sending...............: avg=30.5µs   min=6.04µs  med=21.99µs max=8.2ms   p(90)=46.49µs  p(95)=61.18µs 
-     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s      max=0s      p(90)=0s       p(95)=0s      
-     http_req_waiting...............: avg=204.62ms min=1.84ms  med=8.52ms  max=4.08s   p(90)=28.95ms  p(95)=1.93s   
-     http_reqs......................: 30243   472.210655/s
-     iteration_duration.............: avg=204.98ms min=2.03ms  med=8.83ms  max=4.08s   p(90)=29.33ms  p(95)=1.93s   
-     iterations.....................: 30243   472.210655/s
-     vus............................: 4       min=4        max=100
-     vus_max........................: 100     min=100      max=100
+     checks.........................: 100.00% ✓ 65       ✗ 0    
+     data_received..................: 10 kB   116 B/s
+     data_sent......................: 11 kB   127 B/s
+     http_req_blocked...............: avg=331.41µs min=1.45µs  med=5.49µs  max=2.01ms   p(90)=1.17ms   p(95)=1.27ms  
+     http_req_connecting............: avg=281.76µs min=0s      med=0s      max=1.37ms   p(90)=1.04ms   p(95)=1.14ms  
+     http_req_duration..............: avg=25.46s   min=5.56s   med=6.87s   max=1m29s    p(90)=1m20s    p(95)=1m25s   
+       { expected_response:true }...: avg=25.46s   min=5.56s   med=6.87s   max=1m29s    p(90)=1m20s    p(95)=1m25s   
+     http_req_failed................: 0.00%   ✓ 0        ✗ 65   
+     http_req_receiving.............: avg=122.55µs min=26.72µs med=108.6µs max=321.12µs p(90)=177.42µs p(95)=219.85µs
+     http_req_sending...............: avg=152.47µs min=13.63µs med=31.42µs max=3.32ms   p(90)=382.78µs p(95)=561.15µs
+     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s      max=0s       p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=25.46s   min=5.56s   med=6.87s   max=1m29s    p(90)=1m20s    p(95)=1m25s   
+     http_reqs......................: 65      0.722172/s
+     iteration_duration.............: avg=25.46s   min=5.56s   med=6.87s   max=1m29s    p(90)=1m20s    p(95)=1m25s   
+     iterations.....................: 65      0.722172/s
+     vus............................: 78      min=78     max=100
+     vus_max........................: 100     min=100    max=100
 
-CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
-eb1286e72635   frosty_bartik   107.01%   179.7MiB / 15.62GiB   1.12%     5.39MB / 7.66MB   0B / 17.2MB   13
+CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+be973dcdb571   hardcore_villani   100.63%   34.07MiB / 15.62GiB   0.21%     54.9kB / 45.1kB   0B / 17.2MB   13
 ```
 
 ---
@@ -873,7 +874,7 @@ Benchmark 1: sh helper-build.sh
   Time (mean ± σ):      7.007 s ±  0.316 s    [User: 0.013 s, System: 0.017 s]
   Range (min … max):    6.437 s …  7.618 s    25 runs
 
--rw-r--r-- 1 root root 625 Aug 23 11:28 code.tar.gz
+-rw-r--r-- 1 root root 4.3M Aug 26 11:22 code.tar.gz
 ```
 
 Bun:

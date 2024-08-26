@@ -20,7 +20,7 @@ Benchmarks ideas were designed to test Go feature and it's performance agaisnt o
 
 ## Benchmark
 
-Every folder is a separate benchmark. Benchmark results can be found in `RESULT.md`.
+Every folder is a separate benchmark. Benchmark results can be found in `RESULTS_SIMPLIFIED.md` and `RESULTS.md`.
 
 ### Hello world
 
